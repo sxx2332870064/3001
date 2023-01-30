@@ -62,8 +62,28 @@ html{
 
 }
     
-    
+a{
+    color:orchid;
+    font-family: cursive;
+    background-color: rgb(253, 230, 255);
+}
 
+a:link{/*normal, unvisited link*/
+text-decoration: none;
+}
+
+a:visited{/*a link that user has visited*/
+
+}
+
+a:hover{ /*a link when the user mouses over it*/
+text-decoration: underline;
+font-style: italic;
+}
+
+a:active{ /*a link the moment is it clicked*/
+
+}
 
 /*css syntax for an ID*/
 #secondPara{
