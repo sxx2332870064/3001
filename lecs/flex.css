@@ -1,0 +1,21 @@
+.flex-container{
+    display: flex;
+    /*
+    flex-direction: column-reverse;
+    */
+    justify-content:center;
+    align-items:baseline;
+    flex-wrap: wrap;
+    background-color:cornflowerblue;
+    
+}
+
+.flex-container /*> div > span*/ > div {
+    background-color:lightgray;
+    margin:10px;
+    padding:20px;
+    line-height: 75px;
+    font-size: 50px;
+    text-align:center;
+    
+}
