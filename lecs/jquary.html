@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        
+        <title>jquary example</title>
+        <script>
+            $(document).ready(function(){
+                //$(selector).action()
+                $("button").click(function(){
+                    //when clicking button designated paragraph disappear
+                    $(".second").hide();
+                })
+                $("#p1").mouseleave(function(){
+                    //popup window when mouse left designated pargraph
+                    alert("Mouse has left p1!!!");
+                })
+                /*
+                $("p").on("click", function(){
+                    //when click on paragraph, that one disappears
+                    $(this).hide();
+                })
+                */
+                $("p").on({
+                    //multi-function for when mouse hover over/clicks on all paragraphs
+                    mouseenter:function(){
+                        $(this).css("background-color","lightgray");
+                    },
+                    mouseleave:function(){
+                        $(this).css("background-color","darkgray");
+                    },
+                    click:function(){
+                        $(this).css("background-color","hotpink");
+                    }
+                })
+                $("#toggleButton").click(function(){
+                    $("#togglePara").toggle(500);
+                })
+
+            })
+            //Mouse Events; Keyboard Events; Form Events; Document/Window Events
+            //click         keypress         submit        load
+            //dblclick      keydown          change        resize
+            //mouseenter    keyup            focus         scroll
+            //mouseleave                     blur          unload
+        </script>
+    </head>
+    <body>
+        <p id="p1">p1</p>
+        <p class="p1">p2</p>
+        <p>p3</p>
+        <p>p4</p>
+        <button>click to hide above</button>
+
+        <p id="togglePara">can't you catch me??</p>
+        <button id="toggleButton">try to catch me~~~</button>
+
+    </body>
+</html>
